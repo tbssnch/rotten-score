@@ -25,17 +25,23 @@
           <label for="score">Rotten Tomatoes Score</label>
           <input type="number" id="movie-score">
         </div>
-        <div id="button">
-          <button type="submit">Submit</button>
+        <div>
+          <button id="button" type="submit">Submit</button>
         </div>
       </form>
 
 
-      <div id="table">
-        <span class="movie-output"></span>
-        <span class="year-output"></span>
-        <span class="score-output"></span>
-      </div>
+      <table id="rotten-list">
+        <thead>
+          <tr>
+            <th>Movie</th>
+            <th>Year</th>
+            <th>Rotten Score</th>
+          </tr>
+        </thead>
+        <tbody id="tpain">
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
