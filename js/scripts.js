@@ -22,6 +22,7 @@ $(function() {
     console.log(userInput);
 
     $("button#button").click(function(){
+      $("#tpain").empty();
       userInput.sort(function(a, b) {
         if (a.movieScore < b.movieScore) {
           return 1;
@@ -32,8 +33,12 @@ $(function() {
         return 0;
       });
 
+      });
+
+      userInput.forEach(function(mov){
+        $("#tpain").append("<tr><td>" + mov.movieTitle + "</td> <td>" + mov.movieYear + "</td> <td>" + mov.movieScore + "</td></tr>");
+
     });
 
-    $("#tpain").append("<tr><td>" + newUser.movieTitle + "</td> <td>" + newUser.movieYear + "</td> <td>" + newUser.movieScore + "</td></tr>");
   });
 });
